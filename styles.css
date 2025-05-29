@@ -4,6 +4,7 @@
   --primary-color: #01bbbf;
   --text-dark: #ffffff;
   --text-light: #62748e;
+
   --extra-light: #fafafa;
   --white: #ffffff;
   --max-width: 1200px;
@@ -26,7 +27,7 @@
   font-size: 1rem;
   font-weight: 500;
   color: var(--text-light);
-  line-height: 1.75rem;
+  line-height: 2rem;
   text-align: center;
 }
 
@@ -64,11 +65,36 @@ body {
   font-size: large;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  overflow: visible !important;
   color: var(--text-dark);
-  background: #000428;
+  background: var(--extra-light);
+  /* background: #000428; */
 }
 
+.paragraph-contact__field-email a {
+  text-decoration: none;
+  border-bottom: 1px solid currentColor; 
+  color: var(--text-dark); 
+}
+
+.paragraph-contact__field-email a:hover {
+  color: var(--primary-color); 
+}
+
+.paragraph-contact__field-phone a{
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Montserrat",sans-serif;
+}
+
+.header__content .paragraph-title-text-file {
+  color: var(--text-dark);
+  font-size: 18px;
+  width: 200px;
+}
+
+/* ------------------------ */
 nav {
   position: fixed;
   isolation: isolate;
@@ -106,9 +132,9 @@ nav {
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
-  background-color: var(--extra-light);
+  /* background-color: var(--extra-light); */
   transition: transform 0.5s;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .nav__links.open {
@@ -117,7 +143,7 @@ nav {
 
 .nav__links a {
   font-weight: 500;
-  color: var(--text-dark);
+  color: #444;;
   white-space: nowrap;
 }
 
@@ -133,6 +159,206 @@ nav {
 .nav__links .btn:hover {
   background-color: var(--primary-color);
 }
+
+/* ------------------------- */
+.contacts {
+  padding: 5rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(1, 187, 191, 0.1);
+  border-radius: 50%;
+}
+
+.card-icon i {
+  font-size: 2.5rem;
+  color: #01bbbf;
+}
+
+.contact-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.contact-card p {
+  color: #555;
+  line-height: 1.8;
+}
+
+.contact-card a {
+  color: #01bbbf;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: block;
+}
+
+.contact-card a:hover {
+  color: #018a8d;
+  text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .contact-card {
+    padding: 2rem 1.5rem;
+  }
+}
+/* ------------------------- */
+.about {
+  padding: 5rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #01bbbf;
+}
+
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.about-text ul {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.about-text li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.about-features {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  min-width: 300px;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card i {
+  font-size: 2.5rem;
+  color: #01bbbf;
+  margin-bottom: 1rem;
+}
+
+.feature-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.5;
+}
+/* ------------------------ */
+
 
 .header__container {
   width: 100%;
@@ -323,4 +549,30 @@ nav {
   .header__content :is(h1, .section__description) {
     text-align: left;
   }
+}
+
+/* FIX: Enable page scrolling */
+body {
+  min-height: 100vh; /* Вместо height: 100vh */
+  height: auto;
+  overflow-x: hidden;
+}
+
+/* FIX: Header container */
+.header__container {
+  min-height: 100vh; /* Вместо height: 100vh */
+  height: auto;
+}
+
+/* FIX: Remove fixed heights */
+.section__container {
+  height: auto !important; /* Убираем фиксированную высоту */
+  min-height: 0;
+  overflow: visible;
+}
+
+/* FIX: Sections height */
+.about, .contacts {
+  height: auto;
+  min-height: 0;
 }
