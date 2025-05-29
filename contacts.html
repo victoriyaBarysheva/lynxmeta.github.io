@@ -21,8 +21,8 @@
         </div>
       </div>
       <ul class="nav__links" id="nav-links">
-        <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html" >Главная</a></li>
-        <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="contacts.html" class="active" >Контакты</a></li>
+        <li data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="100"><a href="index.html" >Главная</a></li>
+        <li data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="400"><a href="contacts.html" class="active" >Контакты</a></li>
         <!-- <li data-aos="fade-left" data-aos-duration="1500" data-aos-delay="500"> -->
           <!-- <button class="btn">
             Contact Us
@@ -31,6 +31,7 @@
         <!-- </li> -->
       </ul>
     </nav>
+
     <header class="section__container header__container" id="home">
         <!-- <div class="decore"><img src="Decore.png" alt=""></div> 
          <div class="header__image" data-aos="zoom-in-left" data-aos-duration="2500">
@@ -39,27 +40,42 @@
         <div class="header__content">
             <h2 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="700"> OOO "ЛИНКС МЕТА"</h2>
             <form action="/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1100">
-            <div class="input__group">
-                <label for="location">
-                  <span><i class="ri-map-pin-line"></i></span> Адрес
-                </label>
-                <p>194044, Россия, г. Санкт-Петербург, Большой Сампсониевский пр., д.60А, Бизнес-центр "ТЕЛЕКОМ"</p>
-            </div>
-            <div class="input__group">
-                <label for="phone">
-                  <span><i class="ri-phone-line"></i></span> Телефон
-                </label>
-                <p> +7 (812) 449-47-27 </p>
-            </div>
-            <div class="input__group">
-                <label for="e-mail">
-                  <span><i class="ri-mail-line"></i></span> E-mail
-                </label>
-                <p> sales@protei.ru </p>
-            </div>
+              <div class="input__container">
+                <!-- Адрес -->
+                <div class="input__row">
+                  <label for="location" class="input__label">
+                    <span><i class="ri-map-pin-line"></i></span> Адрес
+                  </label>
+                  <div class="input__value">
+                    196143, город Санкт-Петербург, <br> ул Орджоникидзе, д. 44 к. 5 литера А
+                  </div>
+                </div>
+                
+                <!-- Телефон -->
+                <div class="input__row">
+                  <label for="phone" class="input__label">
+                    <span><i class="ri-phone-line"></i></span> Телефон
+                  </label>
+                  <div class="input__value">
+                    +7 (965) 012-77-26
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="input__row">
+                  <label for="email" class="input__label">
+                    <span><i class="ri-mail-line"></i></span> E-mail
+                  </label>
+                  <div class="input__value">
+                    lynxmeta@yandex.ru
+                  </div>
+                </div>
+
+              </div>
             </form>
         </div>
     </header>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({offset:0});

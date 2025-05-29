@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #01bbbf;
-  --text-dark: #1d293d;
+  --text-dark: #ffffff ;
   --text-light: #62748e;
   --extra-light: #fafafa;
   --white: #ffffff;
@@ -43,7 +43,7 @@
   font-size: 1rem;
   font-family: "Roboto", serif;
   color: var(--white);
-  background-color: var(--primary-color);
+  background-color: black;
   border-radius: 5rem;
   transition: 0.3s;
   cursor: pointer;
@@ -69,9 +69,12 @@ ul {
 
 body {
   font-family: "Roboto", serif;
+  font-size: large;
   height: 100vh;
   width: 100%;
   overflow: hidden;
+  color: var(--text-dark);
+  background: linear-gradient(to right, #000428, #004e92);
 }
 
 nav {
@@ -131,9 +134,12 @@ nav {
 }
 
 .nav__links .btn {
-  font-weight: 500;
-  color: var(--text-dark);
-  background-color: var(--extra-light);
+  font-size: 1.2rem;
+  background-color: var(--text-dark);
+}
+
+.nav__links .btn:hover {
+  background-color: var(--primary-color);
 }
 
 .header__container {
@@ -202,13 +208,55 @@ nav {
   flex-wrap: wrap;
   border-radius: 1rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  
+  background: linear-gradient(to right, #000428, #004e92)
+  
+  
 }
 
-.header__content .input__group {
+/* .header__content .input__group {
   flex: 1;
   display: grid;
   gap: 0.5rem;
+} */
+
+.header__content .input__row {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(1, 187, 191, 0.2);
 }
+
+.header__content .input__row:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.header__content .input__container {
+  display: table;
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+}
+
+/* .header__content .input__row {
+  display: table-row;
+} */
+
+.header__content .input__label {
+  display: table-cell;
+  padding: 15px 15px 15px 15px;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.header__content .input__value {
+  display: table-cell;
+  padding: 15px 15px;
+  width: 100%;
+  vertical-align: top;
+}
+
 
 .header__content label {
   display: flex;
@@ -244,6 +292,8 @@ nav {
   background-color: var(--primary-color);
 }
 
+
+
 @media (width > 540px) {
   .header__content form {
     flex-direction: row;
@@ -260,6 +310,19 @@ nav {
   }
 }
 
+@media (max-width: 768px) {
+  .input__label,
+  .input__value {
+    display: block;
+  }
+  .input__label {
+    padding-bottom: 0;
+  }
+  .input__value {
+    padding-top: 0;
+  }
+}
+
 @media (width > 884px) {
 
   .header__image img {
@@ -271,16 +334,20 @@ nav {
   .section__container{
     overflow: hidden;
   }
+ 
   nav {
     position: static;
     padding: 1rem;
-    max-width: var(--max-width);
+    max-width: var(--max-width); 
     margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    background-color: transparent;
+    /* background: linear-gradient(to right, #000428, #004e92); */
   }
+
 
   .nav__header {
     flex: 1;
@@ -304,40 +371,64 @@ nav {
 
   .nav__links a {
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid transparent;
+    /* border-bottom: 2px solid transparent; */
   }
 
   .nav__links a.active {
-    border-color: var(--primary-color);
+    color: var(--primary-color);
     font-weight: bold;
   }
   
   .nav__links a:hover {
-    border-color: var(--primary-color);
+    color: var(--primary-color);
   }
-
-  .nav__links .btn {
+  
+  /* .nav__links .btn {
     color: var(--white);
     background-color: var(--primary-color);
-  }
-
+  } */
+/* 
   .header__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 40%;
-  }
-
+  } */
 
   .header__container {
+    /* background: linear-gradient(135deg, #1a237e, #283593, #3949ab);
+    color: white; */
+    padding: 5rem 2rem;
+    /* border-radius: 12px; */
+    /* box-shadow: 0 6px 30px rgba(0,0,0,0.25); */
+    position: relative;
+    /* overflow: hidden; */
+}
+
+/* Эффект частиц на заднем плане */
+/* .header__container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05) 0%, transparent 40%);
+    pointer-events: none;
+} */
+
+
+  /* .header__container {
     
   overflow: hidden;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
-  }
+  } */
 
   .header__image {
     grid-area: 1/2/2/3;
