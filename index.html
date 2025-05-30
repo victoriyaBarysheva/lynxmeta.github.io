@@ -1,94 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LYNXMETA</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 
 <body>
+  <!-- Навигация -->
   <nav>
-    <div class="nav__header">
+    <div class="nav__container">
       <div class="nav__logo">
         <a href="#">
-          <h1 data-aos="zoom-in" data-aos-duration="1500">LYNXMETA</h1>
+          <h1>LYNXMETA</h1>
         </a>
       </div>
-      <div class="nav__menu__btn" id="menu-btn">
+      <button class="nav__menu__btn" id="menu-btn">
         <i class="ri-menu-3-line"></i>
+      </button>
+      <div class="nav__links" id="nav-links">
+        <a href="#home" class="active">Главная</a>
+        <a href="#about">О нас</a>
+        <a href="#contacts">Контакты</a>
       </div>
     </div>
-    <ul class="nav__links" id="nav-links">
-      <li data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="100"><a href="index.html"
-          class="active">Главная</a></li>
-      <li data-aos="zoom-out" data-aos-duration="1500" data-aos-delay="400"><a href="contacts.html">Контакты</a></li>
-    </ul>
   </nav>
 
-  <header class="section__container header__container" id="home">
-    <div class="header__content">
-      <section class="about" id="about">
-        <div class="container">
-          <div class="about-content">
-            <!-- Текстовое описание -->
-            <div class="about-text" data-aos="fade-right" data-aos-duration="1000">
-              <h3>LYNXMETA - инновации в IT</h3>
-              <p>Мы специализируемся на разработке передовых IT-решений для бизнеса любого масштаба. Наша команда экспертов создает цифровые продукты, которые помогают компаниям трансформировать свои бизнес-процессы и достигать новых высот.</p>
-              
-              <p>Основные направления нашей деятельности:</p>
-              <ul>
-                <li>Разработка веб-приложений и корпоративных систем</li>
-                <li>Создание мобильных приложений для iOS и Android</li>
-                <li>Искусственный интеллект и машинное обучение</li>
-                <li>Кибербезопасность и защита данных</li>
-              </ul>
-            </div>
-            
-            <!-- Блок с иконками/преимуществами -->
-            <div class="about-features" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-              <div class="feature-card">
-                <i class="ri-code-s-slash-line"></i>
-                <h4>Разработка ПО</h4>
-                <p>Полный цикл создания программного обеспечения</p>
-              </div>
-              
-              <div class="feature-card">
-                <i class="ri-cloud-line"></i>
-                <h4>Облачные решения</h4>
-                <p>Развертывание и управление облачной инфраструктурой</p>
-              </div>
-              
-              <div class="feature-card">
-                <i class="ri-shield-check-line"></i>
-                <h4>Безопасность</h4>
-                <p>Комплексная защита цифровых активов</p>
-              </div>
-              
-              <div class="feature-card">
-                <i class="ri-robot-line"></i>
-                <h4>AI решения</h4>
-                <p>Внедрение искусственного интеллекта в бизнес-процессы</p>
-              </div>
-            </div>
+  <!-- Главная секция -->
+  <section id="home" class="section home-section">
+    <div class="container">
+      <div class="home-content">
+        <div class="home-text" data-aos="fade-up" data-aos-duration="1000">
+          <h1>Создаем инновационные IT-решения</h1>
+          <p>Профессиональная разработка программного обеспечения для вашего бизнеса с индивидуальным подходом и
+            вниманием к деталям</p>
+          <a href="#contacts" class="btn">Связаться с нами</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Секция "О нас" -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+        <h2>О нашей компании</h2>
+        <p>Мы команда профессионалов, создающая цифровые решения для вашего бизнеса</p>
+      </div>
+
+      <div class="about-content">
+        <div class="about-text" data-aos="fade-up" data-aos-duration="1000">
+          <h3>LYNXMETA - инновации в IT</h3>
+          <p>Мы специализируемся на разработке передовых IT-решений для бизнеса любого масштаба. Наша команда экспертов
+            создает цифровые продукты, которые помогают компаниям трансформировать свои бизнес-процессы и достигать
+            новых высот.</p>
+
+          <p>Основные направления нашей деятельности:</p>
+          <ul>
+            <li>Разработка веб-приложений и корпоративных систем</li>
+            <li>Создание мобильных приложений для iOS и Android</li>
+            <li>Искусственный интеллект и машинное обучение</li>
+            <li>Кибербезопасность и защита данных</li>
+          </ul>
+
+          <p>Наш подход сочетает в себе глубокую экспертизу в технологиях, понимание бизнес-процессов и креативное
+            мышление. Мы не просто создаем программное обеспечение - мы создаем инструменты, которые помогают нашим
+            клиентам достигать стратегических целей и получать конкурентные преимущества на рынке.</p>
+        </div>
+
+        <div class="about-features" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <div class="feature-card">
+            <i class="ri-code-s-slash-line"></i>
+            <h4>Разработка ПО</h4>
+            <p>Полный цикл создания программного обеспечения</p>
+          </div>
+
+          <div class="feature-card">
+            <i class="ri-cloud-line"></i>
+            <h4>Облачные решения</h4>
+            <p>Развертывание и управление облачной инфраструктурой</p>
+          </div>
+
+          <div class="feature-card">
+            <i class="ri-shield-check-line"></i>
+            <h4>Безопасность</h4>
+            <p>Комплексная защита цифровых активов</p>
+          </div>
+
+          <div class="feature-card">
+            <i class="ri-robot-line"></i>
+            <h4>AI решения</h4>
+            <p>Внедрение ИИ в бизнес-процессы</p>
           </div>
         </div>
-      </section>
+      </div>
     </div>
-  </header>
+  </section>
+
+  <!-- Секция "Контакты" -->
+  <section id="contacts" class="section contacts">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="1000">
+        <h2>Свяжитесь с нами</h2>
+        <p>Мы всегда рады вашим вопросам и предложениям</p>
+      </div>
+
+      <div class="contact-cards">
+        <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon">
+            <i class="ri-map-pin-2-fill"></i>
+          </div>
+          <h3>Наш адрес</h3>
+          <p>196143, г. Санкт-Петербург, ул Орджоникидзе, д. 44 к. 5 литера А</p>
+        </div>
+
+        <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon">
+            <i class="ri-phone-fill"></i>
+          </div>
+          <h3>Телефон</h3>
+          <p><a href="tel:+79650127726">+7 965 012 77 26</a></p>
+        </div>
+
+        <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon">
+            <i class="ri-mail-fill"></i>
+          </div>
+          <h3>Email</h3>
+          <p><a href="mailto:lynxmeta@yandex.ru">lynxmeta@yandex.ru</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init({ offset: 0 });
-  </script>
-  <script>
+    // Инициализация анимаций
+    AOS.init({
+      offset: 50,
+      duration: 800,
+      once: true
+    });
+
+    // Открытие/закрытие меню на мобильных устройствах
     const menuBtn = document.getElementById("menu-btn");
     const navLinks = document.getElementById("nav-links");
 
     menuBtn.addEventListener("click", () => {
       navLinks.classList.toggle("open");
+    });
+
+    // Плавная прокрутка к якорям
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        navLinks.classList.remove("open");
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
     });
   </script>
 </body>
