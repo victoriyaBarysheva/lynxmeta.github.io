@@ -20,10 +20,10 @@
         </a>
       </div>
       <button class="nav__menu__btn" id="menu-btn">
-        <i class="ri-menu-3-line"></i>
+        <i class="ri-menu-3-line"></i> <!-- Это шрифтовая иконка -->
       </button>
       <div class="nav__links" id="nav-links">
-        <a href="#home" class="active">Главная</a>
+        <a href="#home">Главная</a>
         <a href="#about">О нас</a>
         <a href="#contacts">Контакты</a>
       </div>
@@ -163,6 +163,76 @@
 
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+  <script>
+    function throttle(func, limit) {
+      let lastFunc;
+      let lastRan;
+      return function () {
+        const context = this;
+        const args = arguments;
+        if (!lastRan) {
+          func.apply(context, args);
+          lastRan = Date.now();
+        } else {
+          clearTimeout(lastFunc);
+          lastFunc = setTimeout(function () {
+            if ((Date.now() - lastRan) >= limit) {
+              func.apply(context, args);
+              lastRan = Date.now();
+            }
+          }, limit - (Date.now() - lastRan));
+        }
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav__links a');
+
+      // Функция для определения активной секции
+      function setActiveLink() {
+        let current = '';
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+
+          if (window.scrollY >= (sectionTop - sectionHeight / 3)) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        // Обновляем классы для ссылок
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      // Добавляем обработчики событий
+
+      window.addEventListener('scroll', throttle(setActiveLink, 100));
+
+      window.addEventListener('load', throttle(setActiveLink, 100));
+
+      // Плавная прокрутка к секциям
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+
+          window.scrollTo({
+            top: targetSection.offsetTop - 70, // Учитываем высоту шапки
+            behavior: 'smooth'
+          });
         });
       });
     });
