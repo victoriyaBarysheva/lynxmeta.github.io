@@ -218,9 +218,9 @@
 
       // Добавляем обработчики событий
 
-      window.addEventListener('scroll', throttle(setActiveLink, 100));
+      window.addEventListener('scroll', throttle(setActiveLink, 50));
 
-      window.addEventListener('load', throttle(setActiveLink, 100));
+      window.addEventListener('load', throttle(setActiveLink, 50));
 
       // Плавная прокрутка к секциям
       navLinks.forEach(link => {
